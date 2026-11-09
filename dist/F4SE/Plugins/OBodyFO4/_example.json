@@ -1,0 +1,28 @@
+// OBodyFO4 distribution rules (same keys as OBody NG).
+// Every .json in this folder is read, in alphabetical order. // comments are allowed.
+// Always use the PRESET NAME (as shown in BodySlide), not the file name.
+// FormID: without the plugin index, e.g. "002F7B" or "0x0002F7B".
+// Priority (last wins): random distribution < race < plugin < NPC < blacklist.
+// ORefit lists are merged across ALL files: ship your own file (e.g. MyOutfits.json)
+// instead of editing someone else's.
+// ORefit counts slots 33 BODY, 36 [U] Torso and 41 [A] Torso as clothed; add more
+// chest slots with "orefitBodySlots" (e.g. [54] for a mod that puts bras on 54).
+{
+  "raceFemale": {},
+  "raceMale": {},
+  "npcPluginFemale": {},
+  "npcPluginMale": {},
+  "npcFormID": {},
+  "blacklistedNpcsFormID": {},
+  "blacklistedNpcsPluginFemale": [],
+  "blacklistedNpcsPluginMale": [],
+  "blacklistedRacesFemale": [],
+  "blacklistedRacesMale": [],
+  "blacklistedPresetsFromRandomDistribution": [],
+  "blacklistedOutfitsFromORefitFormID": {},
+  "blacklistedOutfitsFromORefit": [],
+  "blacklistedOutfitsFromORefitPlugin": [],
+  "outfitsForceRefitFormID": {},
+  "outfitsForceRefit": [],
+  "orefitBodySlots": []
+}

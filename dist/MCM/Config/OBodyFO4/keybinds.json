@@ -1,0 +1,10 @@
+{
+  "modName": "OBodyFO4",
+  "keybinds": [
+    {
+      "id": "openPresetMenu",
+      "desc": "OBody: open preset menu",
+      "action": { "type": "CallGlobalFunction", "script": "OBodyFO4", "function": "OpenPresetMenu", "params": [] }
+    }
+  ]
+}

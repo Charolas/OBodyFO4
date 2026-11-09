@@ -1,0 +1,102 @@
+{
+  "modName": "OBodyFO4",
+  "displayName": "OBody FO4",
+  "minMcmVersion": 1,
+  "content": [
+    {
+      "text": "Distribution",
+      "type": "section"
+    },
+    {
+      "id": "iFemaleBody:General",
+      "text": "Female body",
+      "type": "dropdown",
+      "help": "Auto uses the body that has presets installed; if both do, Fusion Girl. Applies on next game start.",
+      "valueOptions": {
+        "options": [
+          "Auto",
+          "Fusion Girl",
+          "CBBE"
+        ],
+        "sourceType": "ModSettingInt"
+      }
+    },
+    {
+      "id": "bIgnoreFusionGirlPresets:General",
+      "text": "Ignore stock Fusion Girl presets",
+      "type": "switcher",
+      "help": "Skips Fusion-Athletic, Curvy, Petite, SeveNBase and VanillaEsque, so only presets you installed are used. Applies on next game start.",
+      "valueOptions": {
+        "sourceType": "ModSettingBool"
+      }
+    },
+    {
+      "id": "bIgnoreBodyTalkPresets:General",
+      "text": "Ignore stock BodyTalk presets",
+      "type": "switcher",
+      "help": "Skips BT-Average, Bodybuilder, Chubby, Muscular, Swimmer and Thin. Without male presets of your own, men will not be randomized. Applies on next game start.",
+      "valueOptions": {
+        "sourceType": "ModSettingBool"
+      }
+    },
+    {
+      "id": "bIgnoreCBBEPresets:General",
+      "text": "Ignore stock CBBE presets",
+      "type": "switcher",
+      "help": "Skips CBBE.xml (CBBE Curvy, Slim, Petite, Chubby, Athletic, SevenBase, UNP imitations...), so only presets you installed are used. Applies on next game start.",
+      "valueOptions": {
+        "sourceType": "ModSettingBool"
+      }
+    },
+    {
+      "id": "bIgnoreTWBPresets:General",
+      "text": "Ignore stock True Wasteland Body presets",
+      "type": "switcher",
+      "help": "Skips the presets shipped with True Wasteland Body. Applies on next game start.",
+      "valueOptions": {
+        "sourceType": "ModSettingBool"
+      }
+    },
+    {
+      "id": "bFilterOutfitPresets:General",
+      "text": "Filter outfit presets",
+      "type": "switcher",
+      "help": "Skips presets with cloth, outfit, nevernude, bikini, feet, hands, push, cleavage or armor in the name. Applies on next game start.",
+      "valueOptions": {
+        "sourceType": "ModSettingBool"
+      }
+    },
+    {
+      "text": "ORefit",
+      "type": "section"
+    },
+    {
+      "id": "bORefit:General",
+      "text": "Enable ORefit",
+      "type": "switcher",
+      "help": "Clothed actors get ORefit changes on top of their body (push-up, smoother shapes), undone exactly when they undress. Outfits can be excluded with JSON files in Data\\F4SE\\Plugins\\OBodyFO4.",
+      "valueOptions": {
+        "sourceType": "ModSettingBool"
+      }
+    },
+    {
+      "id": "bORefitPlayer:General",
+      "text": "ORefit on the player",
+      "type": "switcher",
+      "help": "Also applies ORefit to your character. It only adds its own changes on top of your body and undoes exactly those when you undress, so a body made by hand in LooksMenu is kept.",
+      "valueOptions": {
+        "sourceType": "ModSettingBool"
+      }
+    },
+    {
+      "text": "Hotkeys",
+      "type": "section"
+    },
+    {
+      "id": "openPresetMenu",
+      "text": "Open preset menu",
+      "type": "hotkey",
+      "help": "Opens the preset list for the NPC under your crosshair, or for yourself if there is none."
+    }
+  ]
+}

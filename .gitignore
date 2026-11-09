@@ -1,0 +1,16 @@
+# xmake / build output
+build/
+.xmake/
+vsxmake*/
+*.sln
+*.vcxproj*
+compile_commands.json
+
+# compiled Papyrus (built from scripts-source)
+dist/Scripts/*.pex
+
+# OS / editor
+.vs/
+.vscode/
+Thumbs.db
+desktop.ini
