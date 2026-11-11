@@ -10,6 +10,19 @@
 
 namespace OBodyFO4 {
 
+    std::unordered_set<std::string>& GetAllowedRaces() {
+        static std::unordered_set<std::string> races{ "humanrace" };
+        return races;
+    }
+
+    bool IsAllowedRace(const RE::TESRace* a_race) {
+        const char* editorID = a_race ? a_race->GetFormEditorID() : nullptr;
+        if (!editorID) return false;
+        std::string id{ editorID };
+        std::ranges::transform(id, id.begin(), [](unsigned char c) { return static_cast<char>(std::tolower(c)); });
+        return GetAllowedRaces().contains(id);
+    }
+
     RefitRules& GetRefitRules() {
         static RefitRules rules;
         return rules;
@@ -37,8 +50,7 @@ namespace OBodyFO4 {
 
         bool IsHuman(RE::Actor* a_actor) {
             const auto* npc = a_actor ? a_actor->GetNPC() : nullptr;
-            const auto* race = npc ? npc->GetFormRace() : nullptr;
-            return race && std::string_view{ race->GetFormEditorID() } == "HumanRace"sv;
+            return npc && IsAllowedRace(npc->GetFormRace());
         }
 
         bool IsBlacklisted(RE::TESForm* a_armor) {

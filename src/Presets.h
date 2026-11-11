@@ -53,6 +53,10 @@ namespace OBodyFO4 {
     };
     RefitRules& GetRefitRules();
 
+    // Lowercase editor IDs of the races that get presets: HumanRace plus "additionalRaces".
+    std::unordered_set<std::string>& GetAllowedRaces();
+    bool IsAllowedRace(const RE::TESRace* a_race);
+
     void RegisterPapyrus();
     void HookCrosshair();
     void SpeedUpBodyGen();

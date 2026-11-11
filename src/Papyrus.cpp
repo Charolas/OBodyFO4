@@ -84,7 +84,7 @@ namespace OBodyFO4 {
             return &list[static_cast<std::size_t>(a_index)];
         }
 
-        // Same rule as the distribution: HumanRace only (children are HumanChildRace).
+        // Same rule as the distribution: HumanRace plus "additionalRaces" (children never).
         // Papyrus side declares these as ObjectReference: commonlibf4's RE::Actor has no
         // TYPE_ID of its own, so an RE::Actor* parameter registers as ObjectReference
         // and a Papyrus "Actor" signature is rejected ("does not match existing signature").
@@ -95,7 +95,11 @@ namespace OBodyFO4 {
             if (!a_actor) return false;
             const auto* npc = a_actor->GetNPC();
             const auto* race = npc ? npc->GetFormRace() : nullptr;
-            return race && std::string_view{ race->GetFormEditorID() } == "HumanRace"sv;
+            if (IsAllowedRace(race)) return true;
+            // tells the user which editor ID to put in "additionalRaces"
+            REX::INFO("menu: {:08X} has race '{}', not in the allowed races (add it to \"additionalRaces\" in a JSON file if it is an adult human-bodied race)",
+                a_actor->GetFormID(), race ? race->GetFormEditorID() : "none");
+            return false;
         }
 
         // Closest angle to the player's heading inside a cone. Fallback when the

@@ -7,7 +7,11 @@
 // instead of editing someone else's.
 // ORefit counts slots 33 BODY, 36 [U] Torso and 41 [A] Torso as clothed; add more
 // chest slots with "orefitBodySlots" (e.g. [54] for a mod that puts bras on 54).
+// "additionalRaces": custom ADULT races that use the human body (e.g. ["NanakoRace"]).
+// They get random presets, the menu and ORefit like HumanRace. Use the race's editor ID:
+// if the menu says an NPC "can't receive presets", OBodyFO4.log prints its race.
 {
+  "additionalRaces": [],
   "raceFemale": {},
   "raceMale": {},
   "npcPluginFemale": {},
