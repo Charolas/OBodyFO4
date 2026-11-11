@@ -710,7 +710,7 @@ extern "C" __declspec(dllexport) bool F4SEPlugin_Query(const F4SE::QueryInterfac
 {
     a_info->infoVersion = F4SE::PluginInfo::kVersion;
     a_info->name = "OBodyFO4";
-    a_info->version = 9;
+    a_info->version = 91;
     return !a_f4se->IsEditor();
 }
 

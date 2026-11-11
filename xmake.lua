@@ -1,5 +1,5 @@
 set_project("OBodyFO4")
-set_version("0.9.0")
+set_version("0.9.1")
 set_languages("c++23")
 set_arch("x64")
 
